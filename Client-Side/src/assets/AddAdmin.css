@@ -1,0 +1,183 @@
+/* AddAdmin.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================
+   PAGE
+========================== */
+
+.add-admin-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.add-admin-card {
+  width: 100%;
+  max-width: 550px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.add-admin-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.add-admin-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.add-admin-title {
+  font-size: 2rem;
+  color: #1e3a8a;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.add-admin-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* ==========================
+   FORM
+========================== */
+
+.add-admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 8px;
+  color: #374151;
+  font-weight: 600;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.create-admin-btn {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.create-admin-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+  transform: translateY(-2px);
+}
+
+.create-admin-btn:active {
+  transform: scale(0.98);
+}
+
+/* ==========================
+   MESSAGE
+========================== */
+
+.form-message {
+  margin-top: 20px;
+  padding: 14px;
+  text-align: center;
+  border-radius: 10px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+
+  .add-admin-card {
+    padding: 28px;
+  }
+
+  .add-admin-title {
+    font-size: 1.7rem;
+  }
+
+  .form-input,
+  .create-admin-btn {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .add-admin-page {
+    padding: 20px 12px;
+  }
+
+  .add-admin-card {
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  .add-admin-title {
+    font-size: 1.5rem;
+  }
+
+  .add-admin-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .create-admin-btn {
+    padding: 13px;
+  }
+}

@@ -1,0 +1,230 @@
+
+
+/* Main page */
+.task-list-page {
+  padding: 30px;
+  min-height: 100vh;
+  background-color: #f5f7fb;
+  color: #1e293b;
+}
+
+/* Page header */
+.task-list-page .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.task-list-page .page-header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #172554;
+  letter-spacing: -0.5px;
+}
+
+/* Create Task button */
+.task-list-page .page-header a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 20px;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s ease,
+              transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.task-list-page .page-header a:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Loading and empty states */
+.task-list-page > p {
+  padding: 20px;
+  color: #64748b;
+  font-size: 15px;
+}
+
+.task-list-page > p[role="alert"] {
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+}
+
+/* Responsive table container */
+.task-list-page .table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+}
+
+/* Table */
+.task-list-page table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+/* Table header */
+.task-list-page thead {
+  background-color: #f1f5f9;
+}
+
+.task-list-page th {
+  padding: 16px 20px;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+/* Table body */
+.task-list-page td {
+  padding: 17px 20px;
+  font-size: 14px;
+  color: #475569;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+/* Task title */
+.task-list-page tbody td:first-child {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* Row hover */
+.task-list-page tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.task-list-page tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.task-list-page tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Action links */
+.task-list-page td a {
+  display: inline-block;
+  margin: 2px 3px 2px 0;
+  padding: 6px 10px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.task-list-page td a:first-child {
+  color: #2563eb;
+  background-color: #eff6ff;
+}
+
+.task-list-page td a:first-child:hover {
+  background-color: #dbeafe;
+}
+
+.task-list-page td a:nth-of-type(2) {
+  color: #b45309;
+  background-color: #fffbeb;
+}
+
+.task-list-page td a:nth-of-type(2):hover {
+  background-color: #fef3c7;
+}
+
+/* Delete button */
+.task-list-page td button {
+  display: inline-block;
+  margin: 2px 0;
+  padding: 6px 10px;
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.task-list-page td button:hover {
+  background-color: #fee2e2;
+}
+
+.task-list-page td button:focus-visible,
+.task-list-page td a:focus-visible,
+.task-list-page .page-header a:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .task-list-page {
+    padding: 20px 14px;
+  }
+
+  .task-list-page .page-header {
+    align-items: flex-start;
+  }
+
+  .task-list-page .page-header h2 {
+    font-size: 24px;
+  }
+
+  .task-list-page .page-header a {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .task-list-page th,
+  .task-list-page td {
+    padding: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .task-list-page {
+    padding: 16px 10px;
+  }
+
+  .task-list-page .page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .task-list-page .page-header h2 {
+    font-size: 23px;
+  }
+
+  .task-list-page .page-header a {
+    align-self: flex-start;
+  }
+}

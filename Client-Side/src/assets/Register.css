@@ -1,0 +1,229 @@
+/* =========================
+   Authentication Container
+========================= */
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #2563eb
+  );
+  padding: 20px;
+}
+
+
+/* =========================
+   Auth Card
+========================= */
+
+.auth-card {
+  width: 100%;
+  max-width: 430px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  animation: showCard 0.5s ease-in-out;
+}
+
+
+/* Card Animation */
+
+@keyframes showCard {
+
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================
+   Title
+========================= */
+
+.auth-card h1 {
+  text-align: center;
+  color: #1e293b;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   Form
+========================= */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #334155;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* Input */
+
+.form-group input {
+
+  width: 100%;
+  padding: 14px 15px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+
+  font-size: 16px;
+  color: #1e293b;
+
+  outline: none;
+
+  transition: all 0.3s ease;
+
+}
+
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+
+.form-group input:focus {
+
+  border-color: #2563eb;
+
+  box-shadow:
+  0 0 0 4px rgba(37,99,235,0.15);
+
+}
+
+
+/* =========================
+   Message
+========================= */
+
+.message {
+
+  text-align: center;
+
+  margin: 15px 0;
+
+  padding: 10px;
+
+  border-radius: 8px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-weight: 600;
+
+}
+
+
+/* =========================
+   Button
+========================= */
+
+.auth-card button {
+
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+}
+
+
+.auth-card button:hover {
+
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+
+}
+
+
+.auth-card button:disabled {
+
+  background: #94a3b8;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+}
+
+
+
+/* =========================
+   Register Page Button
+========================= */
+
+.register-btn {
+
+  background: #16a34a !important;
+
+}
+
+
+.register-btn:hover {
+
+  background: #15803d !important;
+
+}
+
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:500px){
+
+  .auth-card {
+
+    padding: 25px;
+
+  }
+
+
+  .auth-card h1 {
+
+    font-size: 24px;
+
+  }
+
+
+}

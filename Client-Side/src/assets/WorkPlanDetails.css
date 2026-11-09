@@ -1,0 +1,274 @@
+.work-plan-details-page {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 36px 24px;
+  background: #f4f7fb;
+  color: #1e293b;
+}
+
+.work-plan-details-page *,
+.work-plan-details-page *::before,
+.work-plan-details-page *::after {
+  box-sizing: border-box;
+}
+
+.work-plan-details-card {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 32px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgb(15 23 42 / 7%);
+}
+
+.work-plan-details-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e8edf4;
+}
+
+.work-plan-details-eyebrow {
+  margin: 0 0 8px;
+  color: #6841e8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.work-plan-details-header h1,
+.work-plan-details-state h1 {
+  margin: 0;
+  color: #172033;
+  font-size: clamp(25px, 4vw, 32px);
+  overflow-wrap: anywhere;
+}
+
+.work-plan-details-header > div > p:last-child {
+  margin: 9px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.work-plan-status {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid #ddd6fe;
+  border-radius: 999px;
+  background: #f5f3ff;
+  color: #5b35c5;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.work-plan-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.work-plan-detail-item {
+  min-width: 0;
+  padding: 18px 20px;
+  border: 1px solid #e8edf4;
+  border-radius: 11px;
+  background: #fff;
+}
+
+.work-plan-detail-item dt {
+  margin-bottom: 8px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.work-plan-detail-item dd {
+  margin: 0;
+  color: #1e293b;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.work-plan-detail-description {
+  grid-column: 1 / -1;
+}
+
+.work-plan-progress {
+  padding: 20px 22px;
+  border: 1px solid #e5e0fb;
+  border-radius: 12px;
+  background: linear-gradient(115deg, #f6f3ff, #fbfaff);
+}
+
+.work-plan-progress > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 13px;
+}
+
+.work-plan-progress h2 {
+  margin: 0;
+  color: #334155;
+  font-size: 14px;
+}
+
+.work-plan-progress span {
+  color: #5330c9;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.work-plan-progress progress {
+  display: block;
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 999px;
+  background: #e7e5ef;
+  accent-color: #6841e8;
+}
+
+.work-plan-progress progress::-webkit-progress-bar {
+  border-radius: 999px;
+  background: #e7e5ef;
+}
+
+.work-plan-progress progress::-webkit-progress-value {
+  border-radius: 999px;
+  background: #6841e8;
+}
+
+.work-plan-progress progress::-moz-progress-bar {
+  border-radius: 999px;
+  background: #6841e8;
+}
+
+.work-plan-details-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.work-plan-details-actions a,
+.work-plan-details-back {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+  background: #fff;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background-color 0.18s ease, transform 0.18s ease;
+}
+
+.work-plan-details-actions .work-plan-edit {
+  border-color: #6841e8;
+  background: #6841e8;
+  color: #fff;
+}
+
+.work-plan-details-actions .work-plan-edit:hover {
+  transform: translateY(-1px);
+  background: #5330c9;
+}
+
+.work-plan-details-actions .work-plan-back:hover,
+.work-plan-details-actions .work-plan-dashboard:hover,
+.work-plan-details-back:hover {
+  background: #f8fafc;
+}
+
+.work-plan-dashboard {
+  margin-left: auto;
+}
+
+.work-plan-details-page a:focus-visible {
+  outline: 3px solid rgb(104 65 232 / 35%);
+  outline-offset: 3px;
+}
+
+.work-plan-details-state {
+  margin-top: 8vh;
+}
+
+.work-plan-details-state > p:not(.work-plan-details-eyebrow) {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.work-plan-details-state .work-plan-details-error {
+  padding: 13px 15px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.work-plan-details-state .work-plan-details-back {
+  margin-top: 12px;
+}
+
+@media (max-width: 680px) {
+  .work-plan-details-page {
+    padding: 20px 12px;
+  }
+
+  .work-plan-details-card {
+    padding: 22px 18px;
+    border-radius: 12px;
+  }
+
+  .work-plan-details-header {
+    flex-direction: column;
+  }
+
+  .work-plan-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-plan-detail-description {
+    grid-column: auto;
+  }
+
+  .work-plan-details-actions a {
+    width: 100%;
+  }
+
+  .work-plan-dashboard {
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-plan-details-page *,
+  .work-plan-details-page *::before,
+  .work-plan-details-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,127 @@
+.citizen-cases-page {
+  min-height: 100vh;
+  padding: 42px 20px;
+  background: #f1f5fa;
+  color: #26384c;
+}
+.citizen-cases-shell { width: min(1180px, 100%); margin: 0 auto; }
+.citizen-cases-header,
+.citizen-case-item-top,
+.citizen-case-history-heading,
+.citizen-cases-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.citizen-cases-header {
+  margin-bottom: 28px;
+  padding: 26px 30px;
+  border: 1px solid #dce6f1;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgb(28 55 85 / 6%);
+}
+.citizen-cases-header h1 { margin: 0; color: #173b65; font-size: clamp(25px, 4vw, 34px); }
+.citizen-cases-header p:not(.citizen-cases-eyebrow) { margin: 8px 0 0; color: #697d93; line-height: 1.55; }
+.citizen-cases-eyebrow { margin: 0 0 8px; color: #1766b2; font-size: 11px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+.citizen-cases-header-actions { flex-shrink: 0; }
+.citizen-cases-header-actions a,
+.citizen-cases-header-actions button,
+.citizen-case-back,
+.citizen-case-history-heading button {
+  padding: 10px 14px;
+  border: 1px solid #cddbea;
+  border-radius: 8px;
+  color: #285276;
+  background: #f8fbfe;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+  cursor: pointer;
+}
+.citizen-cases-header-actions button:hover,
+.citizen-cases-header-actions a:hover,
+.citizen-case-back:hover,
+.citizen-case-history-heading button:hover:not(:disabled) { border-color: #9db7d2; background: #eef5fb; }
+.citizen-portal-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.citizen-portal-card {
+  display: block;
+  padding: 28px;
+  border: 1px solid #dce6f1;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgb(28 55 85 / 5%);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.citizen-portal-card:hover { transform: translateY(-3px); box-shadow: 0 16px 35px rgb(28 55 85 / 10%); }
+.citizen-portal-icon { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 12px; color: #1766b2; background: #eaf3fc; font-size: 22px; font-weight: 800; }
+.citizen-portal-card h2 { margin: 18px 0 7px; color: #173b65; font-size: 21px; }
+.citizen-portal-card p { min-height: 45px; margin: 0 0 18px; color: #6a7d91; line-height: 1.55; }
+.citizen-portal-action { color: #1766b2; font-size: 13px; font-weight: 700; }
+.citizen-case-page-header { align-items: flex-start; }
+.citizen-case-back { flex-shrink: 0; }
+.citizen-case-layout { display: grid; grid-template-columns: minmax(280px, .75fr) minmax(0, 1.25fr); align-items: start; gap: 20px; }
+.citizen-case-panel { min-width: 0; padding: 25px; border: 1px solid #dce6f1; border-radius: 13px; background: #fff; box-shadow: 0 10px 30px rgb(28 55 85 / 5%); }
+.citizen-case-panel h2 { margin: 0; color: #173b65; font-size: 19px; }
+.citizen-case-form { display: grid; gap: 9px; margin-top: 20px; }
+.citizen-case-form label { margin-top: 5px; color: #3d536b; font-size: 13px; font-weight: 650; }
+.citizen-case-form input,
+.citizen-case-form select,
+.citizen-case-form textarea {
+  width: 100%;
+  min-height: 43px;
+  padding: 10px 12px;
+  border: 1px solid #cddbea;
+  border-radius: 8px;
+  color: #26384c;
+  background: white;
+  font: inherit;
+  font-size: 14px;
+}
+.citizen-case-form textarea { min-height: 125px; resize: vertical; }
+.citizen-case-form input:focus,
+.citizen-case-form select:focus,
+.citizen-case-form textarea:focus { border-color: #3981ca; outline: 3px solid rgb(18 97 181 / 12%); }
+.citizen-case-form button { min-height: 45px; margin-top: 10px; border: 0; border-radius: 8px; color: #fff; background: #1766b2; font: inherit; font-weight: 700; cursor: pointer; }
+.citizen-case-form button:hover:not(:disabled) { background: #0f4f8c; }
+.citizen-case-form button:disabled,
+.citizen-case-history-heading button:disabled { cursor: wait; opacity: .65; }
+.citizen-case-hint,
+.citizen-case-empty,
+.citizen-case-history-heading p { color: #71849a; font-size: 13px; line-height: 1.5; }
+.citizen-case-history-heading { align-items: flex-start; margin-bottom: 17px; }
+.citizen-case-history-heading p { margin: 6px 0 0; }
+.citizen-case-list { display: grid; gap: 12px; }
+.citizen-case-item { padding: 17px; border: 1px solid #e2eaf3; border-radius: 10px; background: #fcfdff; }
+.citizen-case-item h3 { margin: 4px 0 0; color: #29445f; font-size: 16px; }
+.citizen-case-reference { margin: 0; color: #1766b2; font-size: 11px; font-weight: 750; letter-spacing: .04em; }
+.citizen-case-status { display: inline-flex; flex-shrink: 0; padding: 6px 10px; border-radius: 999px; color: #52677d; background: #edf2f7; font-size: 11px; font-weight: 750; }
+.citizen-case-status.status-approved,
+.citizen-case-status.status-resolved { color: #17653c; background: #e6f6ed; }
+.citizen-case-status.status-rejected,
+.citizen-case-status.status-closed { color: #9a3434; background: #fff0ef; }
+.citizen-case-status.status-under_review,
+.citizen-case-status.status-awaiting_information { color: #885a0b; background: #fff5dc; }
+.citizen-case-item-meta { margin: 9px 0 0; color: #78899b; font-size: 12px; }
+.citizen-case-item-description { margin: 12px 0 0; color: #4e6277; font-size: 13px; line-height: 1.55; white-space: pre-wrap; }
+.citizen-case-resolution { margin: 12px 0 0; padding: 10px 12px; border-radius: 7px; color: #355672; background: #eef5fb; font-size: 13px; line-height: 1.5; }
+.citizen-case-alert,
+.citizen-case-success { margin: 0 0 18px; padding: 12px 15px; border: 1px solid #ecc4c2; border-radius: 8px; color: #963c38; background: #fff0ef; }
+.citizen-case-success { border-color: #bce1c9; color: #21633b; background: #eef9f1; }
+@media (max-width: 760px) {
+  .citizen-cases-page { padding: 22px 13px; }
+  .citizen-cases-header { align-items: flex-start; flex-direction: column; padding: 22px; }
+  .citizen-case-layout,
+  .citizen-portal-cards { grid-template-columns: 1fr; }
+  .citizen-case-page-header { flex-direction: column; }
+}
+@media (max-width: 480px) {
+  .citizen-cases-header-actions { width: 100%; }
+  .citizen-case-item-top { align-items: flex-start; flex-direction: column; }
+  .citizen-case-panel,
+  .citizen-portal-card { padding: 20px; }
+}

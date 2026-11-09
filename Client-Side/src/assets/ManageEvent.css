@@ -1,0 +1,245 @@
+.manage-events-page,
+.manage-events-page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.manage-events-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  padding: 40px 20px;
+}
+
+.manage-events-page h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.manage-events-page > a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 25px;
+}
+
+.manage-events-page > a button {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.manage-events-page > a button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+}
+
+.manage-events-page hr {
+  border: none;
+  height: 1px;
+  background: #d1d5db;
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+.manage-events-card {
+  background: white;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.manage-events-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.12);
+}
+
+.manage-events-card h3 {
+  color: #1e3a8a;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.manage-events-card p {
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.manage-events-card p:last-of-type {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+
+.manage-events-card a {
+  text-decoration: none;
+}
+
+.manage-events-card button {
+  border: none;
+  padding: 10px 20px;
+  margin-right: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+
+.manage-events-card a button {
+  background: #2563eb;
+  color: white;
+}
+
+.manage-events-card a button:hover {
+  background: #1d4ed8;
+}
+
+
+.manage-events-card button:last-child {
+  background: #c26c6c;
+  color: white;
+}
+ 
+.manage-events-card button:last-child:hover {
+  background: #b91c1c;
+}
+
+
+.manage-events-page .no-events {
+  text-align: center;
+  margin-top: 60px;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+
+
+@media (max-width: 768px) {
+  .manage-events-page {
+    padding: 25px 15px;
+  }
+
+  .manage-events-page h2 {
+    font-size: 1.8rem;
+  }
+
+  .manage-events-card {
+    padding: 20px;
+  }
+
+  .manage-events-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .manage-events-card button {
+    width: 100%;
+    margin: 10px 0 0;
+  }
+
+  .manage-events-card a {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .manage-events-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .manage-events-page > a button {
+    width: 100%;
+  }
+
+  .manage-events-card {
+    padding: 18px;
+  }
+}
+/* Manage Event Action Buttons */
+
+.manage-event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin: 24px auto 30px;
+  align-items: center;
+}
+
+.manage-event-actions a {
+  text-decoration: none;
+}
+
+.manage-event-actions button {
+  min-width: 180px;
+}
+
+/* Create Event Button */
+
+.create-event-btn {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.create-event-btn:hover {
+  background: #15803d;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(22,163,74,0.3);
+}
+
+
+/* Back Dashboard Button */
+
+.back-dashboard-btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.back-dashboard-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(37,99,235,0.3);
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+  .manage-event-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .manage-event-actions button {
+    width: 100%;
+    min-width: unset;
+  }
+}

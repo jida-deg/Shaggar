@@ -1,0 +1,254 @@
+
+
+.task-form-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fb;
+  color: #1e293b;
+}
+
+/* Header */
+.task-form-page .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.task-form-page .page-header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #172554;
+}
+
+.task-form-page .page-header a {
+  padding: 10px 16px;
+  background: #eff6ff;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 7px;
+  transition: 0.2s ease;
+}
+
+.task-form-page .page-header a:hover {
+  background: #dbeafe;
+}
+
+/* Form container */
+.task-form-page form {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.task-form-loading {
+  max-width: 850px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+  color: #64748b;
+  text-align: center;
+}
+
+/* Form groups */
+.task-form-page form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+/* Full-width fields */
+.task-form-page form > div:has(textarea),
+.task-form-page form > div:has(#workPlanId),
+.task-form-page form > div:has(#assignedTo) {
+  grid-column: 1 / -1;
+}
+
+/* Labels */
+.task-form-page label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* Inputs, textarea, selects */
+.task-form-page input,
+.task-form-page textarea,
+.task-form-page select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #1e293b;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.task-form-page input,
+.task-form-page select {
+  min-height: 44px;
+}
+
+.task-form-page textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.task-form-page input::placeholder,
+.task-form-page textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Focus state */
+.task-form-page input:focus,
+.task-form-page textarea:focus,
+.task-form-page select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Disabled fields */
+.task-form-page input:disabled,
+.task-form-page select:disabled {
+  background: #f1f5f9;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Error message */
+.task-form-page > p[role="alert"] {
+  max-width: 850px;
+  box-sizing: border-box;
+  margin: 0 auto 20px;
+  padding: 14px 16px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 14px;
+}
+
+/* Work plan helper message */
+.task-form-page form > div > p {
+  margin: 3px 0 0;
+  color: #b45309;
+  font-size: 13px;
+}
+
+/* Create button */
+.task-form-page form > button {
+  min-height: 46px;
+  padding: 12px 22px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease,
+              transform 0.2s ease;
+}
+
+.task-form-page form > button:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.task-form-page form > button:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* Cancel link */
+.task-form-page form > a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.task-form-page form > a:hover {
+  background: #e2e8f0;
+}
+
+/* Keyboard accessibility */
+.task-form-page a:focus-visible,
+.task-form-page button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+/* Tablet and mobile */
+@media (max-width: 768px) {
+  .task-form-page {
+    padding: 20px 14px;
+  }
+
+  .task-form-page .page-header h2 {
+    font-size: 24px;
+  }
+
+  .task-form-page form {
+    padding: 22px;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .task-form-page {
+    padding: 16px 10px;
+  }
+
+  .task-form-page .page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .task-form-page form {
+    grid-template-columns: 1fr;
+    padding: 18px;
+    gap: 18px;
+  }
+
+  .task-form-page form > div:has(textarea),
+  .task-form-page form > div:has(#workPlanId),
+  .task-form-page form > div:has(#assignedTo) {
+    grid-column: auto;
+  }
+}

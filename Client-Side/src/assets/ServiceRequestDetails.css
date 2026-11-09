@@ -1,0 +1,258 @@
+
+/* Main page */
+.service-request-details-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px;
+  color: #1e293b;
+  box-sizing: border-box;
+}
+
+/* Page header */
+.service-request-details-page .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.service-request-details-page .page-header h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Back links */
+.service-request-details-page a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 7px;
+  background-color: #eff6ff;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.service-request-details-page a:hover {
+  background-color: #dbeafe;
+}
+
+/* Request information card */
+.service-request-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 28px;
+  padding: 26px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.service-request-details p {
+  margin: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  color: #475569;
+}
+
+.service-request-details p strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Horizontal separator */
+.service-request-details-page hr {
+  margin: 32px 0;
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Update status heading */
+.service-request-details-page h3 {
+  margin: 0 0 22px;
+  color: #0f172a;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Update form */
+.service-request-details-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 700px;
+  padding: 26px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.service-request-details-page form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.service-request-details-page form label {
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Select and textarea */
+.service-request-details-page select,
+.service-request-details-page textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background-color: #ffffff;
+  color: #1e293b;
+  font: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.service-request-details-page select {
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.service-request-details-page textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.service-request-details-page select:focus,
+.service-request-details-page textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.service-request-details-page textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Save button */
+.service-request-details-page form button {
+  align-self: flex-start;
+  min-height: 44px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 7px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.service-request-details-page form button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.service-request-details-page form button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Error and success messages */
+.service-request-details-page [role="alert"],
+.service-request-details-page [role="status"] {
+  margin: 0 0 18px;
+  padding: 13px 16px;
+  border-radius: 7px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.service-request-details-page [role="alert"] {
+  color: #b91c1c;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.service-request-details-page [role="status"] {
+  color: #166534;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+/* Loading and missing request */
+.service-request-details-page > p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* Tablet and mobile responsive design */
+@media (max-width: 768px) {
+  .service-request-details-page {
+    padding: 20px;
+  }
+
+  .service-request-details-page .page-header h2 {
+    font-size: 22px;
+  }
+
+  .service-request-details {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .service-request-details-page form {
+    max-width: none;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-request-details-page {
+    padding: 14px;
+  }
+
+  .service-request-details-page .page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .service-request-details-page .page-header h2 {
+    font-size: 20px;
+  }
+
+  .service-request-details {
+    padding: 16px;
+  }
+
+  .service-request-details-page form {
+    padding: 16px;
+  }
+
+  .service-request-details-page form button {
+    width: 100%;
+  }
+}

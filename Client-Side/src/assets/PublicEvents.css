@@ -1,0 +1,270 @@
+/* =========================================
+   PUBLIC EVENTS & NEWS
+   ========================================= */
+
+.public-events {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 6%;
+  background: #f5f7fb;
+  box-sizing: border-box;
+  color: #1e293b;
+}
+
+/* ---------- Page Heading ---------- */
+
+.event-title {
+  max-width: 1200px;
+  margin: 0 auto 42px;
+  padding: 42px 24px;
+  text-align: center;
+  background: linear-gradient(135deg, #103b65, #176b87);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(15, 48, 78, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.event-title::after {
+  content: "";
+  display: block;
+  width: 65px;
+  height: 4px;
+  margin: 18px auto 0;
+  background: #f4b942;
+  border-radius: 5px;
+}
+
+.event-title h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+/* ---------- Events Grid ---------- */
+
+.events-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+/* ---------- Individual Event Card ---------- */
+
+.event-card {
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.045);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  border-color: #cbd9e8;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.09);
+}
+
+/* ---------- Event Content ---------- */
+
+.event-content {
+  padding: 26px;
+}
+
+.event-content h2 {
+  margin: 0 0 16px;
+  color: #123c60;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.event-content > p:not(.event-date) {
+  margin: 0 0 22px;
+  color: #64748b;
+  font-size: 0.96rem;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Event Image Gallery ---------- */
+
+.event-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 24px 0 18px;
+}
+
+.event-images img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  background: #eef2f7;
+  border-radius: 8px;
+  border: 1px solid #e5eaf1;
+  transition: transform 0.25s ease;
+}
+
+.event-images img:hover {
+  transform: scale(1.025);
+}
+
+/* Single image takes the full gallery width */
+
+.event-images img:only-child {
+  grid-column: 1 / -1;
+  height: 240px;
+}
+
+/* ---------- Event Date ---------- */
+
+.event-content .event-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 22px;
+  padding: 9px 12px;
+  color: #315777;
+  background: #eef5fb;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* ---------- Read More / Hide Button ---------- */
+
+.event-content button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 112px;
+  padding: 11px 20px;
+  border: 1px solid #174d76;
+  border-radius: 6px;
+  background: #174d76;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.event-content button:hover {
+  background: #103653;
+  border-color: #103653;
+  box-shadow: 0 4px 10px rgba(23, 77, 118, 0.18);
+}
+
+.event-content button:focus-visible {
+  outline: 3px solid #f4b942;
+  outline-offset: 3px;
+}
+
+/* ---------- Loading and Error Messages ---------- */
+
+.public-events > h2 {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 24px;
+  color: #315777;
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 1024px) {
+  .public-events {
+    padding: 40px 4%;
+  }
+
+  .events-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .event-content {
+    padding: 22px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+  .public-events {
+    padding: 24px 16px;
+  }
+
+  .event-title {
+    margin-bottom: 28px;
+    padding: 32px 18px;
+    border-radius: 10px;
+  }
+
+  .event-title h1 {
+    font-size: 1.65rem;
+  }
+
+  .events-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .event-content {
+    padding: 20px;
+  }
+
+  .event-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .event-images img {
+    height: 130px;
+  }
+
+  .event-images img:only-child {
+    height: 220px;
+  }
+
+  .event-content button {
+    width: 100%;
+    min-height: 44px;
+  }
+}
+
+/* ---------- Reduced Motion Accessibility ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .event-card,
+  .event-images img,
+  .event-content button {
+    transition: none;
+  }
+
+  .event-card:hover,
+  .event-images img:hover {
+    transform: none;
+  }
+}

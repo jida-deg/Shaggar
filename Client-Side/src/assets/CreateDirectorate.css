@@ -1,0 +1,381 @@
+/* ===== Create Directorate Page ===== */
+
+.create-directorate-page {
+  min-height: 100vh;
+  padding: 40px 24px;
+  background: #f4f6fb;
+  color: #1e293b;
+  box-sizing: border-box;
+}
+
+.create-directorate-page * {
+  box-sizing: border-box;
+}
+
+/* Main Form Card */
+
+.create-directorate-card {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 36px;
+  background: #ffffff;
+  border: 1px solid #e5eaf2;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(30, 41, 59, 0.06);
+}
+
+/* Header */
+
+.create-directorate-header {
+  margin-bottom: 30px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.create-directorate-eyebrow {
+  margin: 0 0 10px;
+  color: #6841e8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.create-directorate-header h1 {
+  margin: 0 0 12px;
+  color: #172033;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.create-directorate-header > p:last-child {
+  margin: 0;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Form Layout */
+
+.create-directorate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+/* Labels */
+
+.directorate-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #263247;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Inputs and Textarea */
+
+.directorate-field input,
+.directorate-field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #dce2ec;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #1e293b;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.directorate-delete-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 9px 16px;
+    border: 1px solid #fecaca;
+    border-radius: 7px;
+    background-color: #fff1f2;
+    color: #dc2626;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .directorate-delete-button:hover:not(:disabled) {
+    background-color: #dc2626;
+    color: #ffffff;
+    border-color: #dc2626;
+    box-shadow: 0 2px 5px rgba(220, 38, 38, 0.15);
+  }
+
+  .directorate-delete-button:focus-visible {
+    outline: 3px solid rgba(220, 38, 38, 0.25);
+    outline-offset: 2px;
+  }
+
+  .directorate-delete-button:disabled {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    border-color: #e5e7eb;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  @media (max-width: 600px) {
+    .directorate-delete-button {
+      width: 100%;
+      min-height: 40px;
+      padding: 10px 12px;
+    }
+  }
+
+.directorate-field input {
+  min-height: 49px;
+}
+
+.directorate-field textarea {
+  min-height: 135px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.directorate-field input::placeholder,
+.directorate-field textarea::placeholder {
+  color: #94a3b8;
+}
+
+.directorate-field input:hover,
+.directorate-field textarea:hover {
+  border-color: #b9a8f7;
+}
+
+.directorate-field input:focus,
+.directorate-field textarea:focus {
+  border-color: #6841e8;
+  box-shadow: 0 0 0 4px rgba(104, 65, 232, 0.1);
+}
+
+.directorate-field span {
+  margin-top: -3px;
+  color: #8490a4;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Submit Button */
+
+.directorate-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 9px;
+  background: #6841e8;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+button.directorate-submit {
+  width: 100%;
+}
+
+.directorate-submit:hover:not(:disabled) {
+  background: #9583cf;
+  box-shadow: 0 6px 16px rgba(104, 65, 232, 0.2);
+  transform: translateY(-1px);
+}
+
+.directorate-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.directorate-submit:disabled {
+  background: #a99ae5;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Error and Success Messages */
+
+.directorate-message {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 9px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.directorate-error {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.directorate-success {
+  border: 1px solid #bbf7d0;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+/* Back Link */
+
+.directorate-back-link {
+  display: inline-block;
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid #edf0f5;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+  .directorate-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    color: #344054;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .directorate-field select {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 14px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #5d7398;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+    cursor: pointer;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .directorate-field select:hover {
+    border-color: #98a2b3;
+  }
+
+  .directorate-field select:focus {
+    border-color: #9db1dc;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  }
+
+  .directorate-field select:disabled {
+    background-color: #f2f4f7;
+    color: #98a2b3;
+    cursor: not-allowed;
+    opacity: 0.8;
+  }
+
+  .directorate-field select option {
+    padding: 10px;
+    background-color: #ffffff;
+    color: #344054;
+  }
+
+  @media (max-width: 600px) {
+    .directorate-field {
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .directorate-field select {
+      min-height: 44px;
+      padding: 0 12px;
+      font-size: 14px;
+    }
+  }
+
+.directorate-back-link:hover {
+  color: #6841e8;
+}
+
+.staff-delete-button {
+  background: #c62828;
+}
+
+.staff-delete-button:hover:not(:disabled) {
+  background: #a61f1f;
+  box-shadow: 0 6px 16px rgba(198, 40, 40, 0.2);
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .create-directorate-page {
+    padding: 28px 16px;
+  }
+
+  .create-directorate-card {
+    padding: 28px 22px;
+  }
+
+  .create-directorate-header h1 {
+    font-size: 26px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .create-directorate-page {
+    padding: 16px 10px;
+  }
+
+  .create-directorate-card {
+    padding: 22px 16px;
+    border-radius: 12px;
+  }
+
+  .create-directorate-header {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+  }
+
+  .create-directorate-header h1 {
+    font-size: 23px;
+  }
+
+  .create-directorate-header > p:last-child {
+    font-size: 14px;
+  }
+
+  .create-directorate-form {
+    gap: 20px;
+  }
+
+  .directorate-field input,
+  .directorate-field textarea {
+    padding: 12px;
+  }
+}

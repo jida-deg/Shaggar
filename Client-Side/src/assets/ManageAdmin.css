@@ -1,0 +1,270 @@
+/* ManageAdmin.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   PAGE
+=========================== */
+
+.manage-admin-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  padding: 40px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.manage-admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.page-title {
+  font-size: 2rem;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.page-subtitle {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* ===========================
+   ADD ADMIN BUTTON
+=========================== */
+
+.add-admin-btn {
+  text-decoration: none;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: .3s;
+  box-shadow: 0 6px 18px rgba(37,99,235,.25);
+}
+
+.add-admin-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+}
+
+/* ===========================
+   TABLE CARD
+=========================== */
+
+.admin-table-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table thead {
+  background: #2563eb;
+}
+
+.admin-table thead th {
+  color: white;
+  text-align: left;
+  padding: 18px;
+  font-size: .95rem;
+  letter-spacing: .5px;
+}
+
+.admin-table tbody tr {
+  transition: .3s;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.admin-table tbody td {
+  padding: 18px;
+  color: #374151;
+  font-size: .95rem;
+}
+
+.admin-name {
+  font-weight: 600;
+  color: #111827;
+}
+
+.admin-email {
+  color: #6b7280;
+}
+
+/* ===========================
+   ROLE BADGES
+=========================== */
+
+.role-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: .8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.role-badge.admin {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.role-badge.super-admin {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+/* ===========================
+   ACTION BUTTON
+=========================== */
+
+.action-column {
+  text-align: center;
+}
+
+.delete-btn {
+  border: none;
+  background: #dc2626;
+  color: white;
+  padding: 9px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-2px);
+}
+
+.back-dashboard-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 11px 18px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.back-dashboard-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+}
+
+/* ===========================
+   ACCESS DENIED
+=========================== */
+
+.access-denied {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.access-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  border-radius: 18px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+
+.access-card h2 {
+  color: #dc2626;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.access-card p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 900px) {
+
+  .manage-admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-admin-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .admin-table-card {
+    overflow-x: auto;
+  }
+
+  .admin-table {
+    min-width: 700px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .manage-admin-page {
+    padding: 20px;
+  }
+
+  .page-title {
+    font-size: 1.6rem;
+  }
+
+  .page-subtitle {
+    font-size: .9rem;
+  }
+
+  .access-card {
+    padding: 30px;
+  }
+
+  .access-card h2 {
+    font-size: 1.7rem;
+  }
+}
