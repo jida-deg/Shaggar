@@ -1,5 +1,6 @@
 import { useState } from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
+import api from "../../API/axios";
 import "../../assets/ForgotPassword.css";
 
 const ForgotPassword = () => {
@@ -14,10 +15,7 @@ const ForgotPassword = () => {
     setMessage("");
 
     try {
-      const res = await axios.post(
-        "http://localhost:3000/api/admin/forgot-password",
-        { email }
-      );
+      const res = await api.post("/api/admin/forgot-password", { email });
 
       setMessage(res.data.message);
       setEmail("");
@@ -35,12 +33,14 @@ const ForgotPassword = () => {
       <h2>Forgot Password</h2>
 
       <p>
-        Enter your email address and we'll send you a password reset link.
+        Password reset is available only for super admins. Enter your email
+        address to request a reset link.
       </p>
 
       <form onSubmit={handleSubmit}>
         <input
           type="email"
+          name="email"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -53,6 +53,7 @@ const ForgotPassword = () => {
       </form>
 
       {message && <p>{message}</p>}
+      <p><Link to="/admin/login">Back to login</Link></p>
     </div>
   );
 };

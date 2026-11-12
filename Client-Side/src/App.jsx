@@ -13,6 +13,7 @@ import AddAdmin from './admin/AdminManagement/AddAdmin.jsx';
 import ManageAdmin from './admin/AdminManagement/ManageAdmin.jsx';
 import ChangePassword from './admin/Authentication/ChangePassword.jsx';
 import ForgotPassword from './admin/Authentication/ForgotPassword.jsx';
+import ResetPassword from './admin/Authentication/ResetPassword.jsx';
 import AboutUs from './pages/AboutUs.jsx';
 import OurService from './pages/Ourservice.jsx';
 import CreateDirectorate from './admin/Directorates/CreateDirectorate.jsx';
@@ -288,12 +289,12 @@ function App() {
       />
       <Route 
         path="/admin/forgot-password"
-         element={
-          <ProtectedRoute>
-            <ForgotPassword />
-          </ProtectedRoute>
-       
-         } />
+         element={<ForgotPassword />}
+      />
+      <Route
+         path="/admin/reset-password"
+         element={<ResetPassword />}
+      />
     </Routes>
   );
 }

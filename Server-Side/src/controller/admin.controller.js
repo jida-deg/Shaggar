@@ -4,7 +4,8 @@ import { registerAdmin,
   getAllAdmins, 
   deleteAdminById, 
   changePassword,
-  forgotPassword } from '../service/admin.service.js';
+  forgotPassword,
+  resetPassword } from '../service/admin.service.js';
 
 const AUTH_COOKIE_OPTIONS = {
   httpOnly: true,
@@ -119,14 +120,27 @@ export const changePasswordController = async (req, res, next) => {
 export const forgotPasswordController = async (req, res, next) => {
   try {
     const { email } = req.body;
-    const result = await forgotPassword(email);
+    if (typeof email !== "string" || !email.trim()) {
+      return res.status(400).json({ message: "Email is required." });
+    }
+
+    const result = await forgotPassword(email.trim());
     res.status(200).json(result);
   }
   catch (error) {
     next(error);
   }
-}
+};
 
+export const resetPasswordController = async (req, res, next) => {
+  try {
+    const { token, password } = req.body;
+    const result = await resetPassword(token, password);
+    res.status(200).json(result);
+  } catch (error) {
+    next(error);
+  }
+};
 
 
   

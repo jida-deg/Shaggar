@@ -21,8 +21,22 @@ import connectMongo from "connect-mongo";
 
 const app = express();
 
+const configuredClientUrl = process.env.CLIENT_URL || process.env.FRONTEND_URL;
+const allowedOrigins = new Set([
+  "http://localhost:5173",
+  "http://localhost:5174",
+]);
+if (configuredClientUrl) {
+  allowedOrigins.add(new URL(configuredClientUrl).origin);
+}
+
 app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:5174"],
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.has(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error("Origin is not allowed by CORS"));
+  },
   credentials: true,
 }));
 app.use(cookieParser());

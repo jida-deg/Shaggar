@@ -7,8 +7,9 @@ import {
     getAllAdminsController,
     deleteAdminController,
     changePasswordController,
-    forgotPasswordController
-    , logoutAdminController
+    forgotPasswordController,
+    resetPasswordController,
+    logoutAdminController,
 } from "../controller/admin.controller.js";
 import { protect } from "../middleware/auth.middleware.js";
 import {superAdminOnly} from "../middleware/role.middleware.js";
@@ -39,5 +40,6 @@ adminRouter.get("/", protect, superAdminOnly, getAllAdminsController);
 adminRouter.delete("/:id", protect, superAdminOnly, deleteAdminController);
 adminRouter.put("/change-password", protect, changePasswordController);
 adminRouter.post("/forgot-password", forgotPasswordController);
+adminRouter.post("/reset-password", resetPasswordController);
 
 export default adminRouter;
